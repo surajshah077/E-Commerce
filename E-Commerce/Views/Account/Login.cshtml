@@ -1,0 +1,16 @@
+﻿@model E_Commerce.VMs.LoginVM
+<form asp-action="Login" asp-controller="Account" method="post">
+    <div class="mb-3">
+        <label for="Email" class="form-label">Email</label>
+        <input type="email" asp-for="Email" class="form-control" id="Email" aria-describedby="Email">
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Password" class="form-label">Password</label>
+        <input type="password" asp-for="Password" class="form-control" id="Password" aria-describedby="Password">
+        <span asp-validation-for="Password"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a asp-action="Register" asp-controller="Account" class="btn btn-primary">Register</a>
+</form>

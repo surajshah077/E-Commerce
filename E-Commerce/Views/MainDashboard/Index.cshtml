@@ -1,0 +1,28 @@
+﻿@model List<Main>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">AboutHeading1</th>
+            <th scope="col">AboutHeading2</th>
+            <th scope="col">AboutDescription</th>
+            <th scope="col">Image</th>
+            <th scope="col">Video</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <td>@obj.AboutHeading1</td>
+                <td>@obj.AboutHeading2</td>
+                <td>@obj.AboutDescription</td>
+                <td><img style="height:100px" ;width="100px" src="@obj.Image"></td>
+                <td><video style="height:100px" ; width="100px" src="@obj.Video"></td>
+                <td>
+                    <a asp-action="Edit" asp-controller="MainDashboard" asp-route-id="@obj.MainId">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

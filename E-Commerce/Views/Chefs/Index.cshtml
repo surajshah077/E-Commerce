@@ -1,0 +1,29 @@
+﻿@model List<Chefs>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">profileImage</th>
+            <th scope="col">Name</th>
+            <th scope="col">Designation</th>
+            <th scope="col">Description</th>
+            <th scope="col">socialMediaLink</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <td><img src="~/@obj.profileImage" style="height:100px"; width="100px"></td>
+                <td>@obj.Name</td>
+                <td>@obj.Designation</td>
+                <td>@obj.Description</td>
+                <td>@obj.socialMediaLink</td>
+                <td>
+                    <a asp-action="Edit" asp-controller="Chefs" asp-route-id="@obj.ChefsId">Edit</a>
+                    <a asp-action="Delete" asp-controller="Chefs" asp-route-id="@obj.ChefsId">Delete</a>
+                </td>
+            </tr>
+        }
+        <a asp-action="Create" asp-controller="Chefs" class="btn btn-primary">Create</a>
+    </tbody>
+</table>

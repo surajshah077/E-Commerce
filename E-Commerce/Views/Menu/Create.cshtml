@@ -1,0 +1,50 @@
+﻿@model Menu
+<form asp-action="Create" asp-controller="Menu" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="Topic" class="form-label">Topic</label>
+        <input type="text" asp-for="Topic" class="form-control" id="Topic" aria-describedby="Topic">
+        <span asp-validation-for="Topic"></span>
+    </div> 
+    <div class="mb-3">
+        <label for="itemPhoto" class="form-label">Topic</label>
+        <input type="file" name="item" asp-for="itemPhoto" class="form-control" id="itemPhoto" aria-describedby="itemPhoto">
+        <span asp-validation-for="itemPhoto"></span>
+    </div>
+    <div class="mb-3">
+        <label for="itemName" class="form-label">itemName</label>
+        <input type="text" asp-for="itemName" class="form-control" id="itemName" aria-describedby="itemName">
+        <span asp-validation-for="itemName"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Ingredients" class="form-label">Ingredients</label>
+        <input type="text" asp-for="Ingredients" class="form-control" id="Ingredients" aria-describedby="Ingredients">
+        <span asp-validation-for="Ingredients"></span>
+    </div> 
+    <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="number" asp-for="price" class="form-control" id="price" aria-describedby="price">
+        <span asp-validation-for="price"></span>
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">description</label>
+        <textarea type="text" asp-for="description" class="form-control" id="description" aria-describedby="description"></textarea>
+        <span asp-validation-for="description"></span>
+    </div> 
+    <div class="mb-3">
+        <label for="Name" class="form-label">Name</label>
+        <input type="text" asp-for="Name" class="form-control" id="Name" aria-describedby="Name">
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Designation" class="form-label">Designation</label>
+        <input type="text" asp-for="Designation" class="form-control" id="Designation" aria-describedby="Designation">
+        <span asp-validation-for="Designation"></span>
+    </div>
+    <div class="mb-3">
+        <label for="profileImage" class="form-label">profileImage</label>
+        <input type="file" asp-for="profileImage" name="profileImage" class="form-control" id="profileImage" aria-describedby="profileImage">
+        <span asp-validation-for="profileImage"></span>
+    </div> 
+    <button type="submit">Submit</button>
+    <a asp-action="Index" asp-controller="Menu">Back To List</a>
+</form>

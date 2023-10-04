@@ -1,0 +1,38 @@
+﻿@model bookTable
+<form asp-action="Create" asp-controller="bookTable" method="post" >
+    <div class="mb-3">
+        <label for="Name" class="form-label">Name</label>
+        <input type="text" asp-for="Name" class="form-control" id="Name" aria-describedby="Name">
+        <span asp-validation-for="Name"></span>
+    </div>  <div class="mb-3">
+        <label for="Email" class="form-label">Email</label>
+        <input type="email" asp-for="Email" class="form-control" id="NEmailame" aria-describedby="Email">
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Phone" class="form-label">Phone</label>
+        <input type="number" asp-for="Phone" class="form-control" id="Phone" aria-describedby="Phone">
+        <span asp-validation-for="Phone"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Date" class="form-label">Name</label>
+        <input type="date" asp-for="Date" class="form-control" id="Date" aria-describedby="Date">
+        <span asp-validation-for="Date"></span>
+    </div> 
+    <div class="mb-3">
+        <label for="Time" class="form-label">Time</label>
+        <input type="time" asp-for="Time" class="form-control" id="Time" aria-describedby="Time">
+        <span asp-validation-for="Time"></span>
+    </div> 
+   <div class="mb-3">
+        <label for="People" class="form-label">People</label>
+        <input type="number" asp-for="People" class="form-control" id="People" aria-describedby="People">
+        <span asp-validation-for="People"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Message" class="form-label">Message</label>
+        <textarea type="text" asp-for="Message" class="form-control" id="Message" aria-describedby="Message"></textarea>
+        <span asp-validation-for="Message"></span>
+    </div>
+    <button type="submit" asp-action="Create" asp-controller="bookTable">Create</button>
+</form>

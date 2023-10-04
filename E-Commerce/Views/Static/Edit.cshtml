@@ -1,0 +1,135 @@
+﻿@model Static
+<form asp-action="Edit" asp-controller="Static" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="StaticId" />
+   <div class="mb-3">
+        <label for="Menu" class="form-label">Menu</label>
+        <input type="text" asp-for="Menu" class="form-control" id="Menu" aria-describedby="Menu">
+        <span asp-validation-for="Menu"></span>
+    </div>   
+    <div class="mb-3">
+        <label for="MenuTitle" class="form-label">MenuTitle</label>
+        <input type="text" asp-for="MenuTitle" class="form-control" id="MenuTitle" aria-describedby="MenuTitle">
+        <span asp-validation-for="MenuTitle"></span>
+    </div>   
+    <div class="mb-3">
+        <label for="MenuTitle2" class="form-label">MenuTitle2</label>
+        <input type="text" asp-for="MenuTitle2" class="form-control" id="MenuTitle2" aria-describedby="MenuTitle2">
+        <span asp-validation-for="MenuTitle2"></span>
+    </div> 
+    <div class="mb-3">
+        <label for="MenuTopic1" class="form-label">MenuTopic1</label>
+        <input type="text" asp-for="MenuTopic1" class="form-control" id="MenuTopic1" aria-describedby="MenuTopic1">
+        <span asp-validation-for="MenuTopic1"></span>
+    </div>   
+    <div class="mb-3">
+        <label for="MenuTopic2" class="form-label">MenuTopic2</label>
+        <input type="text" asp-for="MenuTopic2" class="form-control" id="MenuTopic2" aria-describedby="MenuTopic2">
+        <span asp-validation-for="MenuTopic2"></span>
+    </div>  
+    <div class="mb-3">
+        <label for="MenuTopic3" class="form-label">MenuTopic3</label>
+        <input type="text" asp-for="MenuTopic3" class="form-control" id="MenuTopic3" aria-describedby="MenuTopic3">
+        <span asp-validation-for="MenuTopic3"></span>
+    </div>   
+    <div class="mb-3">
+        <label for="MenuTopic4" class="form-label">MenuTopic4</label>
+        <input type="text" asp-for="MenuTopic4" class="form-control" id="MenuTopic4" aria-describedby="MenuTopic4">
+        <span asp-validation-for="MenuTopic4"></span>
+    </div>  
+    <div class="mb-3">
+        <label for="Testimonials" class="form-label">Testimonials</label>
+        <input type="text" asp-for="Testimonials" class="form-control" id="Testimonials" aria-describedby="Testimonials">
+        <span asp-validation-for="Testimonials"></span>
+    </div> 
+    <div class="mb-3">
+        <label for="TestimonialsTitle" class="form-label">TestimonialsTitle</label>
+        <input type="text" asp-for="TestimonialsTitle" class="form-control" id="TestimonialsTitle" aria-describedby="TestimonialsTitle">
+        <span asp-validation-for="TestimonialsTitle"></span>
+    </div>  
+    <div class="mb-3">
+        <label for="TestimonialsTitle2" class="form-label">TestimonialsTitle2</label>
+        <input type="text" asp-for="TestimonialsTitle2" class="form-control" id="TestimonialsTitle2" aria-describedby="TestimonialsTitle2">
+        <span asp-validation-for="TestimonialsTitle2"></span>
+    </div> 
+    <div class="mb-3">
+        <label for="chefs" class="form-label">chefs</label>
+        <input type="text" asp-for="chefs" class="form-control" id="chefs" aria-describedby="chefs">
+        <span asp-validation-for="chefs"></span>
+    </div>
+    <div class="mb-3">
+        <label for="chefsTitle" class="form-label">chefsTitle</label>
+        <input type="text" asp-for="chefsTitle" class="form-control" id="chefsTitle" aria-describedby="chefsTitle">
+        <span asp-validation-for="chefsTitle"></span>
+    </div>
+    <div class="mb-3">
+        <label for="chefsTitle2" class="form-label">chefsTitle2</label>
+        <input type="text" asp-for="chefsTitle2" class="form-control" id="chefsTitle2" aria-describedby="chefsTitle2">
+        <span asp-validation-for="chefsTitle2"></span>
+    </div>
+    <div class="mb-3">
+        <label for="chefsTitle3" class="form-label">chefsTitle3</label>
+        <input type="text" asp-for="chefsTitle3" class="form-control" id="chefsTitle3" aria-describedby="chefsTitle3">
+        <span asp-validation-for="chefsTitle3"></span>
+    </div>  
+    <div class="mb-3">
+        <label for="Gallery" class="form-label">Gallery</label>
+        <input type="text" asp-for="Gallery" class="form-control" id="Gallery" aria-describedby="Gallery">
+        <span asp-validation-for="Gallery"></span>
+    </div>  
+    <div class="mb-3">
+        <label for="GalleryTitle" class="form-label">GalleryTitle</label>
+        <input type="text" asp-for="GalleryTitle" class="form-control" id="GalleryTitle" aria-describedby="GalleryTitle">
+        <span asp-validation-for="GalleryTitle"></span>
+    </div>   
+    <div class="mb-3">
+        <label for="GalleryTitle2" class="form-label">GalleryTitle2</label>
+        <input type="text" asp-for="GalleryTitle2" class="form-control" id="GalleryTitle2" aria-describedby="GalleryTitle2">
+        <span asp-validation-for="GalleryTitle2"></span>
+    </div> 
+    <div class="mb-3">
+        <label for="Table" class="form-label">Table</label>
+        <input type="text" asp-for="Table" class="form-control" id="Table" aria-describedby="Table">
+        <span asp-validation-for="Table"></span>
+    </div> 
+      <div class="mb-3">
+        <label for="TableTitle" class="form-label">TableTitle</label>
+        <input type="text" asp-for="TableTitle" class="form-control" id="TableTitle" aria-describedby="TableTitle">
+        <span asp-validation-for="TableTitle"></span>
+    </div>   
+    <div class="mb-3">
+        <label for="TableTitle2" class="form-label">TableTitle2</label>
+        <input type="text" asp-for="TableTitle2" class="form-control" id="TableTitle2" aria-describedby="TableTitle2">
+        <span asp-validation-for="TableTitle2"></span>
+    </div> 
+    <div class="mb-3">
+        <label for="TableTitle3" class="form-label">TableTitle3</label>
+        <input type="text" asp-for="TableTitle3" class="form-control" id="TableTitle3" aria-describedby="TableTitle3">
+        <span asp-validation-for="TableTitle3"></span>
+    </div>
+    <div class="mb-3">
+        <label for="ContactAddress" class="form-label">ContactAddress</label>
+        <input asp-for="ContactAddress" class="form-control" id="ContactAddress" aria-describedby="ContactAddress">
+        <span asp-validation-for="ContactAddress"></span>
+    </div>
+    <div class="mb-3">
+        <label for="ContactEmail" class="form-label">ContactEmail</label>
+        <input type="email" asp-for="ContactEmail" class="form-control" id="ContactEmail" aria-describedby="ContactEmail">
+        <span asp-validation-for="ContactEmail"></span>
+    </div>
+    <div class="mb-3">
+        <label for="ContactPhone" class="form-label">ContactPhone</label>
+        <input type="number" asp-for="ContactPhone" class="form-control" id="ContactPhone" aria-describedby="ContactPhone">
+        <span asp-validation-for="ContactPhone"></span>
+    </div>
+    <div class="mb-3">
+        <label for="WorkingDays" class="form-label">WorkingDays</label>
+        <input type="time" asp-for="WorkingDays" class="form-control" id="WorkingDays" aria-describedby="WorkingDays">
+        <span asp-validation-for="WorkingDays"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Weekend" class="form-label">Weekend</label>
+        <input type="time" asp-for="Weekend" class="form-control" id="Weekend" aria-describedby="Weekend">
+        <span asp-validation-for="Weekend"></span>
+    </div>
+    <button type="submit">Submit</button>
+</form>

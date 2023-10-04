@@ -1,0 +1,23 @@
+﻿@model Contact
+<form asp-action="Create" asp-controller="Contact" method="post">
+    <div class="mb-3">
+        <label for="Name" class="form-label">Name</label>
+        <input type="text" asp-for="Name" class="form-control" id="Name" aria-describedby="Name">
+        <span asp-validation-for="Name"></span>
+    </div>  <div class="mb-3">
+        <label for="Email" class="form-label">Email</label>
+        <input type="email" asp-for="Email" class="form-control" id="NEmailame" aria-describedby="Email">
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Subject" class="form-label">Subject</label>
+        <input type="text" asp-for="Subject" class="form-control" id="Subject" aria-describedby="Subject">
+        <span asp-validation-for="Subject"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Message" class="form-label">Message</label>
+        <textarea type="text" asp-for="Message" class="form-control" id="Message" aria-describedby="Message"></textarea>
+        <span asp-validation-for="Message"></span>
+    </div>
+  <button type="submit" asp-action="Create" asp-controller="Contact">Create</button>
+</form>

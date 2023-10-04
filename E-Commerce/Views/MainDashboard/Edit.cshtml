@@ -1,0 +1,32 @@
+﻿@model E_Commerce.Models.Main
+<form asp-action="Edit" asp-controller="MainDashboard" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="MainId" />
+    <input type="hidden" asp-for="Image" />
+    <div class="mb-3">
+        <label for="AboutHeading1" class="form-label">AboutHeading1</label>
+        <input type="text" asp-for="AboutHeading1" class="form-control" id="AboutHeading1" aria-describedby="AboutHeading1">
+        <span asp-validation-for="AboutHeading1"></span>
+    </div>
+    <div class="mb-3">
+        <label for="AboutHeading2" class="form-label">AboutHeading1</label>
+        <input type="text" asp-for="AboutHeading2" class="form-control" id="AboutHeading2" aria-describedby="AboutHeading2">
+        <span asp-validation-for="AboutHeading2"></span>
+    </div>
+    <div class="mb-3">
+        <label for="AboutDescription" class="form-label">AboutDescription</label>
+        <input type="text" asp-for="AboutDescription" class="form-control" id="AboutDescription" aria-describedby="AboutDescription">
+        <span asp-validation-for="AboutDescription"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Image" class="form-label">Image</label>
+        <input type="file" asp-for="Image" name="file" class="form-control" id="Image" aria-describedby="Image">
+        <span asp-validation-for="Image"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Video" class="form-label">Video</label>
+        <input class="form-control" asp-for="Video" name="video" id="Video" aria-describedby="Video">
+        <span asp-validation-for="Video"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a asp-action="Index" asp-controller="MainDashboard">Back To List</a>
+</form>

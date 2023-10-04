@@ -1,0 +1,38 @@
+﻿@model List<Static>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Menu</th>
+            <th scope="col">MenuTitle</th>
+            <th scope="col">MenuTitle2</th>
+            <th scope="col">MenuTopic1</th>
+            <th scope="col">MenuTopic2</th>
+            <th scope="col">MenuTopic3</th>
+            <th scope="col">MenuTopic4</th>
+            <th scope="col">Testimonials</th>
+            <th scope="col">TestimonialsTitle</th>
+            <th scope="col">TestimonialsTitle2</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model)
+        {
+        <tr>
+                <td>@obj.Menu</td>
+                <td>@obj.MenuTitle</td>
+                <td>@obj.MenuTitle2</td>
+                <td>@obj.MenuTopic1</td>
+                <td>@obj.MenuTopic2</td>
+                <td>@obj.MenuTopic3</td>
+                <td>@obj.MenuTopic4</td>
+                <td>@obj.Testimonials</td>
+                <td>@obj.TestimonialsTitle</td>
+                <td>@obj.TestimonialsTitle2</td>
+                <td>
+                    <a asp-action="Edit" asp-controller="Static" asp-route-id="@obj.StaticId">Edit</a>
+                 </td>
+        </tr>
+        }
+     </tbody>
+</table>

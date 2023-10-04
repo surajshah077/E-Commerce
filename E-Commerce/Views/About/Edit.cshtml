@@ -1,0 +1,57 @@
+﻿@model E_Commerce.Models.About
+@{
+   var image= ViewBag.image;
+}
+<form asp-action="Edit" asp-controller="About" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="AboutId" />
+    <input type="hidden" asp-for="Image" />
+    <input type="hidden" asp-for="Image2" />
+
+    <div class="mb-3">
+        <label for="AboutTitle1" class="form-label">AboutTitle1</label>
+        <input type="text" asp-for="AboutTitle1" class="form-control" id="AboutTitle1" aria-describedby="AboutTitle1">
+        <span asp-validation-for="AboutTitle1"></span>
+  </div> 
+  <div class="mb-3">
+        <label for="AboutTitle2" class="form-label">AboutTitle2</label>
+        <input type="text" asp-for="AboutTitle2" class="form-control" id="AboutTitle2" aria-describedby="AboutTitle2">
+        <span asp-validation-for="AboutTitle2"></span>
+  </div> 
+  <div class="mb-3">
+        <label for="Image" class="form-label">Image</label>
+        <input type="file" name="image1" asp-for="Image" class="form-control" id="Image" aria-describedby="Image">
+        <span asp-validation-for="Image"></span>
+  </div> 
+  <div class="mb-3">
+        <label for="Message" class="form-label">Message</label>
+        <input type="text" asp-for="Message" class="form-control" id="Message" aria-describedby="Message">
+        <span asp-validation-for="Message"></span>
+  </div>  <div class="mb-3">
+        <label for="phoneNumber" class="form-label">phoneNumber</label>
+        <input type="number" asp-for="phoneNumber" class="form-control" id="phoneNumber" aria-describedby="phoneNumber">
+        <span asp-validation-for="phoneNumber"></span>
+  </div>
+    <div class="mb-3">
+        <label for="shortDescription" class="form-label">shortDescription</label>
+        <input type="text" asp-for="shortDescription" class="form-control" id="shortDescription" aria-describedby="shortDescription">
+        <span asp-validation-for="shortDescription"></span>
+    </div>  
+    <div class="mb-3">
+        <label for="description" class="form-label">description</label>
+        <input type="text" asp-for="description" class="form-control" id="description" aria-describedby="description">
+        <span asp-validation-for="description"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Image2" class="form-label">Image2</label>
+       
+        <input type="file" src="image" name="Image2" asp-for="Image2" class="form-control" id="Image2" aria-describedby="Image2">
+        <span asp-validation-for="Image2"></span>
+    </div>  
+    <div class="mb-3">
+        <label for="Video" class="form-label">Video</label>
+        <input name="Video" asp-for="Video" class="form-control" id="Video" aria-describedby="Video">
+        <span asp-validation-for="Video"></span>
+    </div>
+    <button type="submit" asp-action="Edit" asp-controller="About">Submit</button>
+    <a asp-action="Index" asp-controller="About">Back To List</a>
+</form>

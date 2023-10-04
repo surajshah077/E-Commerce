@@ -1,0 +1,35 @@
+﻿@model Menu
+<form asp-action="Delete" asp-controller="Menu" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="MenuId" />
+    <div class="mb-3">
+        <label for="Topic" class="form-label">Topic</label>
+        <input type="text" asp-for="Topic" class="form-control" id="Topic" aria-describedby="Topic">
+  </div>
+  <div class="mb-3">
+        <label for="itemName" class="form-label">itemName</label>
+        <input type="text" asp-for="itemName" class="form-control" id="itemName" aria-describedby="itemName">
+   </div>
+    <div class="mb-3">
+        <label for="Ingredients" class="form-label">Ingredients</label>
+        <input type="text" asp-for="Ingredients" class="form-control" id="Ingredients" aria-describedby="Ingredients">
+   </div>
+    <div class="mb-3">
+        <label for="price" class="form-label">Topic</label>
+        <input type="number" asp-for="price" class="form-control" id="price" aria-describedby="price">
+        <span asp-validation-for="price"></span>
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">description</label>
+        <textarea type="text" asp-for="description" class="form-control" id="description" aria-describedby="description"></textarea>
+   </div>
+    <div class="mb-3">
+        <label for="Name" class="form-label">Name</label>
+        <input type="text" asp-for="Name" class="form-control" id="Name" aria-describedby="Name">
+   </div>
+    <div class="mb-3">
+        <label for="Designation" class="form-label">Designation</label>
+        <input type="text" asp-for="Designation" class="form-control" id="Designation" aria-describedby="Designation">
+    </div>
+ <button type="submit">Delete</button>
+    <a asp-action="Index" asp-controller="Menu">Back To List</a>
+</form>

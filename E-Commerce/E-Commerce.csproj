@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>E_Commerce</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\aboutVideo\" />
+    <Folder Include="wwwroot\event\" />
+    <Folder Include="wwwroot\main\" />
+    <Folder Include="wwwroot\menu\" />
+    <Folder Include="wwwroot\chefs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\Vendor\aos\aos.cjs.js" />
+    <None Include="wwwroot\assets\Vendor\aos\aos.esm.js" />
+    <None Include="wwwroot\assets\Vendor\aos\aos.js" />
+    <None Include="wwwroot\assets\Vendor\aos\aos.js.map" />
+    <None Include="wwwroot\assets\Vendor\glightbox\js\glightbox.js" />
+    <None Include="wwwroot\assets\Vendor\glightbox\js\glightbox.min.js" />
+  </ItemGroup>
+
+</Project>

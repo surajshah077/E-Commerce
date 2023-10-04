@@ -1,0 +1,39 @@
+﻿@model List<E_Commerce.Models.Menu>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Topic</th>
+            <th scope="col">itemPhoto</th>
+            <th scope="col">itemName</th>
+            <th scope="col">Ingredients</th>
+            <th scope="col">price</th>
+            <th scope="col">description</th>
+            <th scope="col">Name</th>
+            <th scope="col">Designation</th>
+            <th scope="col">profileImage</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model)
+        {
+        <tr>
+                <td>@obj.Topic</td>
+                <td src="@obj.itemPhoto"></td>
+                <td>@obj.itemName</td>
+                <td>@obj.Ingredients</td>
+                <td>@obj.price</td>
+                <td>@obj.description</td>
+                <td>@obj.Name</td>
+                <td>@obj.Designation</td>
+                <td>@obj.profileImage</td>
+                <td><img src="@obj.profileImage" /></td>
+                <td>
+                    <a asp-action="Edit" asp-controller="Menu" asp-route-id="@obj.MenuId">Edit</a>
+                    <a asp-action="Delete" asp-controller="Menu" asp-route-id="@obj.MenuId">Delete</a>
+                </td>
+        </tr>
+        }
+        <a asp-action="Create" asp-controller="Menu" class="btn btn-primary">Create</a>
+    </tbody>
+</table>

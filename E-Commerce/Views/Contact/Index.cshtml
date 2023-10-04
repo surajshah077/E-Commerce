@@ -1,0 +1,22 @@
+﻿@model List<Contact>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Message</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var obj in Model)
+        {
+            <tr>
+                <td>@obj.Name</td>
+                <td>@obj.Email</td>
+                <td>@obj.Subject</td>
+                <td>@obj.Message</td>
+           </tr>
+        }
+    </tbody>
+ </table>

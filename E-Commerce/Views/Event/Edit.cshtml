@@ -1,0 +1,27 @@
+﻿@model Event
+<form asp-action="Edit" asp-controller="Event" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="EventId" />
+    <input type="hidden" asp-for="eventPicture" />
+    <div class="mb-3">
+        <label for="eventName" class="form-label">eventName</label>
+        <input type="text" asp-for="eventName" class="form-control" id="eventName" aria-describedby="eventName">
+        <span asp-validation-for="eventName"></span>
+    </div> 
+    <div class="mb-3" >
+        <label for="eventPrice" class="price-tag">eventPrice</label>
+        <input type="number" asp-for="eventPrice" class="form-control" id="eventPrice" aria-describedby="eventPrice">
+        <span asp-validation-for="eventPrice"></span>
+    </div> 
+    <div class="mb-3">
+        <label for="eventDescription" class="form-label">eventDescription</label>
+        <textarea type="text" asp-for="eventDescription" class="form-control" id="eventDescription" aria-describedby="eventDescription"></textarea>
+        <span asp-validation-for="eventDescription"></span>
+    </div>
+    <div class="mb-3">
+        <label for="eventPicture" class="form-label">eventPicture</label>
+        <input type="file" name="file" asp-for="eventPicture" class="form-control" id="eventPicture" aria-describedby="eventPicture">
+        <span asp-validation-for="eventPicture"></span>
+    </div>
+    <button type="submit" class="btn bnt-primary">Create</button>
+    <a asp-action="Index" asp-controller="Event">Back To List</a>
+</form>

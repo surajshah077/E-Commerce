@@ -1,0 +1,27 @@
+﻿@model Chefs
+<form asp-action="Delete" asp-controller="Chefs" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="ChefsId" />
+    <div class="mb-3">
+        <label for="profileImage" class="form-label">profileImage</label>
+        <input type="file" name="file" asp-for="profileImage" class="form-control" id="profileImage" aria-describedby="profileImage">
+    </div>
+    <div class="mb-3">
+        <label for="Name" class="form-label">Name</label>
+        <input type="text" asp-for="Name" class="form-control" id="Name" aria-describedby="Name">
+    </div>
+    <div class="mb-3">
+        <label for="Designation" class="form-label">eventPrice</label>
+        <input type="text" asp-for="Designation" class="form-control" id="Designation" aria-describedby="Designation">
+   </div>
+    <div class="mb-3">
+        <label for="Description" class="form-label">Description</label>
+        <textarea type="text" asp-for="Description" class="form-control" id="Description" aria-describedby="Description"></textarea>
+   </div>
+    <div class="mb-3">
+        <label for="socialMediaLink" class="form-label">socialMediaLink</label>
+        <input asp-for="socialMediaLink" class="form-control" id="socialMediaLink" aria-describedby="socialMediaLink"/>
+   </div>
+
+    <button type="submit" asp-action="Delete" asp-controller="Chefs">Delete</button>
+    <a asp-action="Index" asp-controller="Chefs">Back To List</a>
+</form>

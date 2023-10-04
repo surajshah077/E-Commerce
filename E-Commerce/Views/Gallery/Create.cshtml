@@ -1,0 +1,10 @@
+﻿@model Gallery
+<form asp-action="Create" asp-controller="Gallery" method="post" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="GalleryPicture" class="form-label">profileImage</label>
+        <input type="file" name="file" asp-for="GalleryPicture" class="form-control" id="GalleryPicture" aria-describedby="GalleryPicture">
+        <span asp-validation-for="GalleryPicture"></span>
+    </div>
+    <button type="submit" asp-action="Create" asp-controller="Galllery">Create</button>
+    <a asp-action="Index" asp-controller="Gallery">Back To List</a>
+</form>

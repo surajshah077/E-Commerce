@@ -1,0 +1,39 @@
+﻿@using E_Commerce.Models.Enum;
+@model Register
+<form asp-action="Register" asp-controller="Account" method="post">
+    <div class="mb-3">
+        <label for="Name" class="form-label">Name</label>
+        <input type="text" asp-for="Name" class="form-control" id="Name" aria-describedby="Name">
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Email" class="form-label">Email</label>
+        <input type="email" asp-for="Email" class="form-control" id="Email" aria-describedby="Email">
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Password" class="form-label">Password</label>
+        <input type="password" asp-for="Password" class="form-control" id="Password" aria-describedby="Password">
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div class="mb-3">
+        <label for="phoneNumber" class="form-label">phoneNumber</label>
+        <input type="number" asp-for="phoneNumber" class="form-control" id="phoneNumber" aria-describedby="phoneNumber">
+        <span asp-validation-for="phoneNumber"></span>
+    </div>
+    <div class="mb-3">
+        <label for="Address" class="form-label">Address</label>
+        <input type="text" asp-for="Address" class="form-control" id="Address" aria-describedby="Address">
+        <span asp-validation-for="Address"></span>
+    </div>
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <input type="hidden" value="@Role.Admim" asp-for="role" />
+    }
+    else
+    {
+        <input type="hidden" value="@Role.Superadmin" asp-for="role" />
+    }
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
